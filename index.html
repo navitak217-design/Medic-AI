@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  /* CENTER CONTENT */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home{
+  color: white;
+  margin-left: 10%;
+  max-width: 500px;
+}
+
+.home h1{
+  font-size: 3rem;
+}
+
+.home p{
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.btn{
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 15px 30px;
+  margin-top: 20px;
+  border-top-right-radius: 0;
+  background: linear-gradient(45deg, #184981, #ffffff);
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: rgb(221, 38, 38);
+  border-top-right-radius: 30px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px){
+  body{
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .home{
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .home h1{
+    font-size: 2.2rem;
+  }
+
+  .btn{
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+</style>
+
+    
+    </style>
+</head>
+<body>
+    <div class="home">
+    <h1> WELCOME TO<br> MEDIC AI</h1>
+    <p>This app is for educational purpose only</p>
+    <a href="chatbot.html">
+  <button class="btn"><b>lets care</b></button>
+</a>
+    </div>
+</body>
+</html>

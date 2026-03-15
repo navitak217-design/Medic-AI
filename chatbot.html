@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic AI Chatbot</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f7fb;
+
+            font-family: "Saira", sans-serif;
+        }
+
+        .chatbox {
+            width: 350px;
+             max-width: 95%;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin: auto;
+            margin-top: 10%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #184981;
+            font-size: 40px;
+        }
+.disclaimer{
+  text-align: justify;
+  color: rgb(14, 1, 1);
+  font-size: 14px;
+  margin: 20px;
+}
+        input {
+            width: 90%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #184981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(20, 40, 132);
+        }
+
+
+/*navbar*/
+        .slide {
+            height: 100%;
+            width: 180px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgb(148, 193, 233);
+            transition: 0.5s ease;
+            transform: translateX(-180px);
+            z-index: 100;
+
+        }
+
+        h1 {
+            color: #000000;
+            font-weight: 800;
+            text-align: right;
+            padding: 10px 0;
+            padding-right: 30px;
+            pointer-events: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            color: rgb(4, 26, 26);
+            font-weight: 500;
+
+            display: block;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s ease-out;
+            font-size: 20px;
+            padding: 12px 10px;
+        }
+
+        ul li:hover a {
+            color: rgb(235, 235, 241);
+            background-color: rgb(16, 19, 149);
+        }
+
+        ul li a i {
+            width: 40px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .menu-toggle {
+            display: none;
+            visibility: hidden;
+
+        }
+
+        .toggle {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 20px;
+            left: 14px;
+            z-index: 200;
+            background-color: rgb(12, 136, 178);
+            cursor: pointer;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle .common {
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            background-color: black;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+
+        .toggle .top-line {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle .middle-line {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle .bottom-line {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input:checked~.toggle .top-line {
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+
+        input:checked~.toggle .middle-line {
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(-45deg);
+        }
+
+        input:checked~.toggle .bottom-line {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        input:checked~.slide {
+            transform: translateX(0);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .back-btn {
+      position: absolute;
+      left: 20px;
+      bottom: 50px;
+      font-size: 30px;
+      text-decoration: none;
+
+    }
+
+    .back-btn i {
+      color: #3727ab;
+    }
+
+    .back-btn i:hover {
+      color: #d05f5f;
+      transform: scale(1.1);
+    }
+
+@media (max-width: 768px) {
+
+  .chatbox {
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <label>
+ 
+        <input type="checkbox" class="menu-toggle">
+        <div class="toggle">
+            <span class="top-line common"></span>
+            <span class="middle-line common"></span>
+            <span class="bottom-line common"></span>
+
+        </div>
+        <div class="slide">
+            <h1>MENU</h1>
+            <ul>
+                <li><a href="emergency.html"> <i class="bi bi-heart-pulse-fill"></i>Emergency</a></li>
+                <li><a href="disease.html"> <i class="bi bi-lungs-fill"></i>Disease</a></li>
+                <li><a href="medicine.html"> <i class="bi bi-capsule"></i>Medicine</a></li>
+            </ul>
+                      <div class="back-btn"><a href="index.html"><i class="bi bi-arrow-left-square-fill"></i></a>Exit</div>
+        </div>
+        
+    </label>
+
+    <div>
+
+        <div class="chatbox">
+            <h2>Medic AI</h2>
+<p class="disclaimer">
+This application is for educational purposes only.  
+Please consult a qualified healthcare professional for medical advice.
+</p>
+          <input type="text" id="query" placeholder="Search disease or symptom...">
+<button onclick="searchDisease()">Search</button>
+
+<p id="result"></p>
+
+
+        </div>
+
+    </div>
+<script>
+const medicalData = [
+  {
+    disease: "fever",
+    medicine: "Paracetamol",
+    dosage: "500mg",
+    note: "Take after food",
+  },
+  {
+    disease: "headache",
+    medicine: "Ibuprofen",
+    dosage: "400mg",
+    note: "Avoid empty stomach",
+  },
+  {
+    disease: "cold",
+    medicine: "Cetirizine",
+    dosage: "10mg",
+    note: "Once daily",
+  },
+  {
+    disease: "diabetes",
+    medicine: "Metformin",
+    dosage: "As prescribed by doctor",
+    note: "Consult doctor",
+  }
+];
+
+function searchDisease() {
+  const query = document.getElementById("query").value.toLowerCase();
+  const result = document.getElementById("result");
+
+  const match = medicalData.find(item =>
+    item.disease.includes(query)
+  );
+
+  if (!match) {
+    result.innerHTML = "No disease found";
+    return;
+  }
+
+  result.innerHTML = `
+    <h3>Disease: ${match.disease}</h3>
+    <p><b>Medicine:</b> ${match.medicine}</p>
+    <p><b>Dosage:</b> ${match.dosage}</p>
+    <p><b>Note:</b> ${match.note}</p>
+    <p style="color:red;font-size:13px;">
+      Educational purpose only. Consult a doctor.
+    </p>
+  `;
+}
+
+
+</script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    body {
+
+      background: #e6f0ff;
+      padding: 20px;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 35px;
+      text-decoration: none;
+    }
+
+    .back-btn i {
+      color: #3727ab;
+    }
+
+    .back-btn i:hover {
+      color: #d05f5f;
+      transform: scale(1.1);
+    }
+
+    h1 {
+      color: black;
+      margin-left: 35%;
+      font-size: 40px;
+    }
+
+    .main {
+      background-color: rgb(36, 18, 135);
+      padding: 15px;
+      margin: 50px;
+      border-radius: 29px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .main a {
+      color: rgb(227, 218, 218);
+      font-size: 34px;
+      text-decoration: none;
+      margin-left: 10%;
+    }
+
+
+    .main:hover {
+      background-color: rgb(103, 101, 114);
+      color: black;
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: brown;
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: rgb(23, 23, 145);
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    @media(max-width: 768px) {
+      h1 {
+        margin-left: 15%;
+        font-size: 30px;
+      }
+
+      .main {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .main a {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back-btn"><a href="chatbot.html"><i class="bi bi-arrow-left-square-fill"></i></a></div>
+
+  <h1><i class="bi bi-heart-pulse-fill"></i>Emergency Guide</h1>
+  <div class="main">
+    <a href="#heart">Heart Attack</a>
+  </div>
+  <div class="main">
+    <a href="#stroke">Stroke</a>
+  </div>
+  <div class="main">
+    <a href="#highbp">High BP (Hypertensive Crisis)</a>
+  </div>
+  <div class="main">
+    <a href="#lowbp">Low BP (Shok)</a>
+  </div>
+  <div class="main">
+    <a href="#asthma"> Asthma Attack </a>
+  </div>
+  <div class="main">
+    <a href="#bleeding"> Severe Bleeding</a>
+  </div>
+  <div class="main">
+    <a href="#burns"> Burns</a>
+  </div>
+  <div class="main">
+    <a href="#snake"> Snake Bite</a>
+  </div>
+  <div class="main">
+    <a href="#food"> Food Poisoning </a>
+  </div>
+  <div class="main">
+    <a href="#ARF"> Acute Respiratory Failure </a>
+  </div>
+
+  <section id="heart">
+    <h2>Heart Attack</h2>
+
+    <h3>Overview</h3>
+    <p>A heart attack happens when blood flow to the heart is blocked.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Chest pain or pressure</li>
+      <li>Pain in arm, neck, jaw</li>
+      <li>Shortness of breath</li>
+      <li>Sweating and nausea</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Keep patient calm and seated</li>
+      <li><b>Don’t:</b> Do not delay emergency help</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Call emergency services immediately</li>
+      <li>Loosen tight clothes</li>
+      <li>Give aspirin only if prescribed</li>
+    </ul>
+  </section>
+
+
+  <!-- STROKE -->
+  <section id="stroke">
+    <h2> Stroke</h2>
+
+    <h3>Overview</h3>
+    <p>Stroke occurs when blood supply to the brain stops.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Face drooping</li>
+      <li>Weak arm or leg</li>
+      <li>Slurred speech</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Call emergency immediately</li>
+      <li><b>Don’t:</b> Do not give food or water</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Lay patient on side</li>
+      <li>Keep head slightly raised</li>
+    </ul>
+  </section>
+
+  <!-- HIGH BP -->
+  <section id="highbp">
+    <h2>High BP (Hypertensive Crisis)</h2>
+
+    <h3>Overview</h3>
+    <p>Very high blood pressure can damage organs.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Severe headache</li>
+      <li>Nose bleeding</li>
+      <li>Chest pain</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Keep patient relaxed</li>
+      <li><b>Don’t:</b> Avoid physical activity</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Seek emergency medical care</li>
+      <li>Do not give unprescribed medicine</li>
+    </ul>
+  </section>
+
+  <!-- LOW BP -->
+  <section id="lowbp">
+    <h2> Low BP (Shock)</h2>
+
+    <h3>Overview</h3>
+    <p>Low BP reduces blood flow to vital organs.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Dizziness</li>
+      <li>Cold skin</li>
+      <li>Fainting</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Raise legs slightly</li>
+      <li><b>Don’t:</b> Do not make patient stand</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Lay patient flat</li>
+      <li>Cover with blanket</li>
+    </ul>
+  </section>
+
+  <!-- ASTHMA -->
+  <section id="asthma">
+    <h2> Asthma Attack</h2>
+
+    <h3>Overview</h3>
+    <p>Asthma attack causes difficulty in breathing.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Wheezing sound</li>
+      <li>Chest tightness</li>
+      <li>Shortness of breath</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Help use inhaler</li>
+      <li><b>Don’t:</b> Do not panic</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Seat patient upright</li>
+      <li>Repeat inhaler if needed</li>
+    </ul>
+  </section>
+
+  <!-- BLEEDING -->
+  <section id="bleeding">
+    <h2> Severe Bleeding</h2>
+
+    <h3>Overview</h3>
+    <p>Heavy bleeding can be life-threatening.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Continuous bleeding</li>
+      <li>Weakness</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Apply pressure</li>
+      <li><b>Don’t:</b> Remove objects from wound</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Use clean cloth</li>
+      <li>Apply firm pressure</li>
+    </ul>
+  </section>
+
+  <!-- BURNS -->
+  <section id="burns">
+    <h2> Burns</h2>
+
+    <h3>Overview</h3>
+    <p>Burns skin damage hoti hai jo heat, chemicals, electricity ya fire se hoti hai.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Red or blistered skin</li>
+      <li>Severe pain</li>
+      <li>Swelling</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Burn area ko thanday pani se thanda karo</li>
+      <li><b>Don’t:</b> Ice, oil, toothpaste ya cream na lagao</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>10–15 minutes tak running water lagao</li>
+      <li>Clean cloth se cover karo</li>
+      <li>Severe burn me hospital le jao</li>
+    </ul>
+  </section>
+
+
+  <!-- SNAKE BITE -->
+  <section id="snake">
+    <h2> Snake Bite</h2>
+
+    <h3>Overview</h3>
+    <p>Snake bite me venom body me enter ho sakta hai jo dangerous hota hai.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Swelling and pain at bite area</li>
+      <li>Nausea or vomiting</li>
+      <li>Breathing difficulty</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Patient ko bilkul still rakho</li>
+      <li><b>Don’t:</b> Bite ko cut ya suck na karo</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Bite area ko immobilize karo</li>
+      <li>Tight items remove karo</li>
+      <li>Immediately hospital le jao</li>
+    </ul>
+  </section>
+
+
+  <!-- FOOD POISONING -->
+  <section id="food">
+    <h2> Food Poisoning</h2>
+
+    <h3>Overview</h3>
+    <p>Contaminated food ya water se food poisoning hoti hai.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Vomiting</li>
+      <li>Diarrhea</li>
+      <li>Stomach cramps</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Fluids aur ORS do</li>
+      <li><b>Don’t:</b> Junk aur spicy food na do</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>ORS solution do</li>
+      <li>Rest karne do</li>
+      <li>Severe case me doctor se consult</li>
+    </ul>
+  </section>
+
+
+  <!-- ACUTE RESPIRATORY FAILURE -->
+  <section id="ARF">
+    <h2> Acute Respiratory Failure</h2>
+
+    <h3>Overview</h3>
+    <p>Is condition me lungs body ko sufficient oxygen nahi de pate.</p>
+
+    <h3>Symptoms</h3>
+    <ul>
+      <li>Severe breathing problem</li>
+      <li>Blue lips or fingers</li>
+      <li>Confusion or anxiety</li>
+    </ul>
+
+    <h3>Do’s & Don’ts</h3>
+    <ul>
+      <li><b>Do:</b> Emergency services call karo</li>
+      <li><b>Don’t:</b> Patient ko akela na choro</li>
+    </ul>
+
+    <h3>First Aid</h3>
+    <ul>
+      <li>Patient ko upright position me bithao</li>
+      <li>Airway clear rakho</li>
+      <li>Immediate medical help lo</li>
+    </ul>
+  </section>
+
+</body>
+
+</html>
